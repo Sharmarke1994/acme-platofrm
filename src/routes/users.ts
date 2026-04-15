@@ -11,4 +11,8 @@ router.post("/users", authMiddleware, (req, res) => {
   res.json({ created: true });
 });
 
+router.delete("/admin/users/:id", deleteUser);
+
+router.put("/admin/permissions", updatePermissions);
+
 export default router;
