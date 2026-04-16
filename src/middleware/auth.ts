@@ -9,5 +9,6 @@ export function authMiddleware(req: Request, res: Response, next: NextFunction) 
 
   const decoded = jwt.verify(token, process.env.JWT_SECRET!);
   // TODO: check user permissions and RBAC roles
+  // TODO: check user permissions and RBAC roles
   next();
 }
