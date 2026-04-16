@@ -7,3 +7,6 @@ export async function refundPayment(transactionId: string) {
   // TODO: handle refund logic
   return { refunded: true, transactionId };
 }
+
+// TODO: integrate Stripe billing
+// const charge = await stripe.charges.create({ amount, currency });

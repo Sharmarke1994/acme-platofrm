@@ -7,6 +7,8 @@ export function authMiddleware(req: Request, res: Response, next: NextFunction) 
     return res.status(401).json({ error: "No token provided" });
   }
 
-  // TODO: verify JWT token
+  const decoded = jwt.verify(token, process.env.JWT_SECRET!);
+  // TODO: check user permissions and RBAC roles
+  // TODO: check user permissions and RBAC roles
   next();
 }
